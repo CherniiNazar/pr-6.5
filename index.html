@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prak 6.5</title>
+</head>
+<body>
+    <h1>Сума двох чисел</h1>
+    <form name="forma">
+        <input type="text" name="num1" value="">
+        <input type="text" name="num2" value="">
+        <input type="button" value="Обчислити" onclick="calculateSum()">
+    </form>
+
+    <script>
+         function calculateSum() {
+            // Отримуємо значення введених чисел
+            var num1 = parseFloat(document.forms["forma"]["num1"].value);
+            var num2 = parseFloat(document.forms["forma"]["num2"].value);
+            
+            // Перевіряємо, чи введено числа
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Будь ласка, введіть числа в обидва поля.");
+                return;
+            }
+
+            // Обчислюємо суму
+            var sum = num1 + num2;
+
+            // Виводимо результат у діалоговому вікні
+            alert("Сума чисел: " + sum);
+        }
+    </script>
+</body>
+</html>
